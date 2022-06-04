@@ -5,7 +5,7 @@ from smiles_augmentation.reaction_smiles_enumerator import ReactionSmilesEnumera
 
 class TestReactionSmilesEnumerator(TestCase):
 
-    def test_smiles_enumerator(self):
+    def test_reaction_smiles_enumerator(self):
         # includes valid and invalid reaction smiles
         reaction_smiles0 = 'CC(=O)O>>CC(=O)O'
         reaction_smiles1 = 'CC(=O)O.OCC>[H+].[Cl-].OCC>CC(=O)OCC'
