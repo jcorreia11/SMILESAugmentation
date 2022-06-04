@@ -43,7 +43,7 @@ class SmilesEnumerator:
     @staticmethod
     def _enumerate_one(smiles, n_max: int = 1, remove_duplicates: bool = True, seed: int = None) -> List[str]:
         """
-        Enumerate `n_max` new SMILES strings from the given `smile` string.
+        Enumerate `n_max` new SMILES strings from the given `smiles` string.
 
         Parameters
         ----------
