@@ -1,0 +1,11 @@
+reaction_SMILES
+CC(C)C[Mg+].CON(C)C(=O)c1ccc(O)nc1>>CC(C)CC(=O)c1ccc(O)nc1
+CN.O=C(O)c1ccc(Cl)c([N+](=O)[O-])c1>>CNc1ccc(C(=O)O)cc1[N+](=O)[O-]
+CCn1cc(C(=O)O)c(=O)c2cc(F)c(-c3ccc(N)cc3)cc21.O=CO>>CCn1cc(C(=O)O)c(=O)c2cc(F)c(-c3ccc(NC=O)cc3)cc21
+COCC(C)Oc1cc(Oc2cnc(C(=O)N3CCC3)cn2)cc(C(=O)O)c1.Cc1cnc(N)cn1>>COCC(C)Oc1cc(Oc2cnc(C(=O)N3CCC3)cn2)cc(C(=O)Nc2cnc(C)cn2)c1
+Clc1cc2c(Cl)nc(-c3ccncc3)nc2s1.NCc1ccc(Cl)c(Cl)c1>>Clc1cc2c(NCc3ccc(Cl)c(Cl)c3)nc(-c3ccncc3)nc2s1
+Cc1c(Cl)nnc(C(C#N)c2ccc(F)c(C#N)c2)c1C>>Cc1c(Cl)nnc(Cc2ccc(F)c(C#N)c2)c1C
+CC(N)c1ccc(F)c(Cl)c1.O=C(N1CCc2ccc(Cl)c(OS(=O)(=O)C(F)(F)F)c2CC1)C(F)(F)F>>CC(Nc1c(Cl)ccc2c1CCN(C(=O)C(F)(F)F)CC2)c1ccc(F)c(Cl)c1
+CC(C)N1CCN(C(=O)c2ccc3[nH]c(C(=O)N4CCN(S(C)(=O)=O)CC4)cc3c2)CC1.CCOC(=O)N1CCNCC1>>CCOC(=O)N1CCN(C(=O)c2cc3cc(C(=O)N4CCN(C(C)C)CC4)ccc3[nH]2)CC1
+CC(C(=O)O)C(=O)NCc1ccc(F)cc1.CN1C(=O)C(N)c2ccccc2-c2ccccc21>>CC(C(=O)NCc1ccc(F)cc1)C(=O)NC1C(=O)N(C)c2ccccc2-c2ccccc21
+CC(=O)N1CCN(c2ccc(N)nc2)CC1.O=C(O)Cc1ccc(Br)c(C(F)(F)F)c1>>CC(=O)N1CCN(c2ccc(NC(=O)Cc3ccc(Br)c(C(F)(F)F)c3)nc2)CC1
