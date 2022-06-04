@@ -43,7 +43,7 @@ class SmilesEnumerator:
     @staticmethod
     def _enumerate_one(smiles, n_max: int = 1, remove_duplicates: bool = True, seed: int = None) -> List[str]:
         """
-        Enumerate `n_max` new SMILES strings from the given `smile` string.
+        Enumerate `n_max` new SMILES strings from the given `smiles` string.
 
         Parameters
         ----------
@@ -89,7 +89,7 @@ class SmilesEnumerator:
             List of SMILES strings.
         """
         if isinstance(self.smiles, str):
-            return self._enumerate_one(self.smiles, n_max, self.remove_duplicates)
+            return self._enumerate_one(self.smiles, n_max, self.remove_duplicates, self.seed)
         else:
             return Parallel(n_jobs=self.n_jobs,
                             backend="multiprocessing")(delayed(self._enumerate_one)(smiles,
