@@ -33,6 +33,9 @@ def _enumerate_reactants_products(reaction_smiles: str,
     Tuple[List[str], List[str]]:
         Tuple of lists of enumerated reactant and product SMILES strings.
     """
+    if seed:
+        random.seed(seed)
+
     reactants = reaction_smiles.split(">")[0]
     products = reaction_smiles.split(">")[-1]
 
