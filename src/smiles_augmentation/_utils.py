@@ -2,7 +2,7 @@ import itertools
 import random
 from typing import List, Tuple
 
-from smiles_augmentation.smiles_enumerator import SmilesEnumerator
+from smiles_augmentation.smiles_enumerators import SmilesRandomizer
 
 
 def _enumerate_reactants_products(reaction_smiles: str,
@@ -39,14 +39,14 @@ def _enumerate_reactants_products(reaction_smiles: str,
     reactants = reaction_smiles.split(">")[0]
     products = reaction_smiles.split(">")[-1]
 
-    enumerated_reactants_list = [SmilesEnumerator(smiles=reactant,
+    enumerated_reactants_list = [SmilesRandomizer(smiles=reactant,
                                                   remove_duplicates=remove_duplicates,
                                                   seed=seed,
                                                   n_jobs=1,
                                                   verbose=verbose).enumerate(n_max=n_max)
                                  for reactant in reactants.split(".")]
 
-    enumerated_products_list = [SmilesEnumerator(smiles=product,
+    enumerated_products_list = [SmilesRandomizer(smiles=product,
                                                  remove_duplicates=remove_duplicates,
                                                  seed=seed,
                                                  n_jobs=1,

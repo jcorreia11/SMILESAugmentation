@@ -5,17 +5,23 @@ reaction SMILES.
 
 ## Jupyter Notebooks
 
-- [SMILES Augmentation](smiles_augmentation.ipynb):
+- [SMILES Randomizer](smiles_augmentation_example.ipynb):
 
   Quick example on how to use SMILESAugmentation for compound SMILES data augmentation.
 
 
-- [Reaction SMILES Augmentation](reaction_smiles_augmentation.ipynb):
+- [Reaction SMILES Randomizer](reaction_smiles_randomizer_example.ipynb):
 
   Quick example on how to use SMILESAugmentation for reaction SMILES data augmentation.
 
 
-- [Levenshtein Reaction SMILES Augmentation](levenshtein_reaction_smiles_augmentation.ipynb):
+- [Levenshtein Reaction SMILES Augmentation](reaction_smiles_levenshtein_example.ipynb):
 
     Quick example on how to use SMILESAugmentation for reaction SMILES data augmentation with Levenshtein
     distance.
+
+
+- [Reaction SMILES Permutations](reaction_smiles_levenshtein_example.ipynb):
+
+    Quick example on how to use SMILESAugmentation for reaction SMILES data augmentation using reactants 
+    and products permutations.

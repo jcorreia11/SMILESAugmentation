@@ -1,9 +1,9 @@
 from unittest import TestCase
 
-from smiles_augmentation.reaction_smiles_enumerator import ReactionSmilesEnumerator
+from smiles_augmentation.reaction_smiles_enumerators import ReactionSmilesRandomizer
 
 
-class TestReactionSmilesEnumerator(TestCase):
+class TestReactionSmilesRandomizer(TestCase):
 
     def test_reaction_smiles_enumerator(self):
         # includes valid and invalid reaction smiles
@@ -16,7 +16,7 @@ class TestReactionSmilesEnumerator(TestCase):
                                 '()C(=O)O).(OCC)>>(C(=O)OCC).(O)']
 
         # remove_duplicates=False, seed=None, n_jobs=1, verbose=0
-        enumerator0 = ReactionSmilesEnumerator(reaction_smiles0,
+        enumerator0 = ReactionSmilesRandomizer(reaction_smiles0,
                                                remove_duplicates=False,
                                                seed=None,
                                                n_jobs=1,
@@ -24,7 +24,7 @@ class TestReactionSmilesEnumerator(TestCase):
         self.assertEqual(len(enumerator0.enumerate(n_max=1)), 1)
         self.assertEqual(len(enumerator0.enumerate(n_max=10)), 10)
 
-        enumerator1 = ReactionSmilesEnumerator(reaction_smiles1,
+        enumerator1 = ReactionSmilesRandomizer(reaction_smiles1,
                                                remove_duplicates=False,
                                                seed=None,
                                                n_jobs=1,
@@ -33,12 +33,12 @@ class TestReactionSmilesEnumerator(TestCase):
         self.assertEqual(len(enumerator1.enumerate(n_max=10)), 10)
 
         # remove_duplicates=False, seed=123, n_jobs=1, verbose=0
-        enumerator2 = ReactionSmilesEnumerator(reaction_smiles2, remove_duplicates=False, seed=123, n_jobs=1, verbose=0)
+        enumerator2 = ReactionSmilesRandomizer(reaction_smiles2, remove_duplicates=False, seed=123, n_jobs=1, verbose=0)
         self.assertEqual(len(enumerator2.enumerate(n_max=1)), 1)
         self.assertEqual(len(enumerator2.enumerate(n_max=10)), 10)
 
         # remove_duplicates=True, seed=123, n_jobs=-1, verbose=0
-        enumerator3 = ReactionSmilesEnumerator(reaction_smiles_list,
+        enumerator3 = ReactionSmilesRandomizer(reaction_smiles_list,
                                                remove_duplicates=True,
                                                seed=123,
                                                n_jobs=-1,
