@@ -10,7 +10,7 @@ from rdkit import RDLogger
 from smiles_augmentation._utils import _enumerate_reactants_products
 
 
-class ReactionSmilesEnumerator:
+class ReactionSmilesRandomizer:
     """
     Class for enumerating reaction SMILES.
     """
@@ -22,7 +22,7 @@ class ReactionSmilesEnumerator:
                  n_jobs: int = 1,
                  verbose: int = 0):
         """
-        Initializes a ReactionSmilesEnumerator object.
+        Initializes a ReactionSmilesRandomizer object.
 
         Parameters
         ----------
@@ -130,7 +130,7 @@ class ReactionSmilesEnumerator:
                                                        for reaction_smiles in self.reaction_smiles)
 
 
-class LevenshteinReactionSmilesEnumerator:
+class ReactionSmilesLevenshtein:
     """
     Class for enumerating reaction SMILES using the Levenshtein distance.
     Based on: https://github.com/MolecularAI/Levenshtein
@@ -143,7 +143,7 @@ class LevenshteinReactionSmilesEnumerator:
                  n_jobs: int = 1,
                  verbose: int = 0):
         """
-        Initializes a LevenshteinReactionEnumerator object.
+        Initializes a ReactionSmilesLevenshtein object.
 
         Parameters
         ----------
@@ -183,9 +183,9 @@ class LevenshteinReactionSmilesEnumerator:
         reaction_smiles: str
             Reaction SMILES string to enumerate.
         n_max: int
-            Maximum number of SMILES to enumerate in the SmilesEnumerator calls.
+            Maximum number of SMILES to enumerate in the SmilesRandomizer calls.
         remove_duplicates: bool
-            Remove duplicates from the enumerated SMILES in the SmilesEnumerator calls.
+            Remove duplicates from the enumerated SMILES in the SmilesRandomizer calls.
         seed: int
             Random seed.
         verbose: int
@@ -254,7 +254,7 @@ class LevenshteinReactionSmilesEnumerator:
                                                        for reaction_smiles in self.reaction_smiles)
 
 
-class PermutationsReactionSmilesEnumerator:
+class ReactionSmilesPermutator:
     """
     Class for enumerating reaction SMILES using permutations.
     """
@@ -266,7 +266,7 @@ class PermutationsReactionSmilesEnumerator:
                  n_jobs: int = 1,
                  verbose: int = 0):
         """
-        Initializes a PermutationsReactionEnumerator object.
+        Initializes a ReactionSmilesPermutator object.
 
         Parameters
         ----------
@@ -306,9 +306,9 @@ class PermutationsReactionSmilesEnumerator:
         reaction_smiles: str
             Reaction SMILES string to enumerate.
         n_max: int
-            Maximum number of SMILES to enumerate in the SmilesEnumerator calls.
+            Maximum number of SMILES to enumerate in the SmilesRandomizer calls.
         remove_duplicates: bool
-            Remove duplicates from the enumerated SMILES in the SmilesEnumerator calls.
+            Remove duplicates from the enumerated SMILES in the SmilesRandomizer calls.
         seed: int
             Random seed.
         verbose: int
@@ -346,7 +346,7 @@ class PermutationsReactionSmilesEnumerator:
 
     def enumerate(self, n_max: int = 1) -> List[str]:
         """
-        Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES using the Levenshtein distance.
+        Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES using permutations.
 
         Parameters
         ----------

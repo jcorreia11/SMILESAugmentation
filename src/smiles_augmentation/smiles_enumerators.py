@@ -4,7 +4,7 @@ from joblib import Parallel, delayed
 from rdkit import RDLogger, Chem
 
 
-class SmilesEnumerator:
+class SmilesRandomizer:
     """
     Class to enumerate SMILES strings.
     """
@@ -16,7 +16,7 @@ class SmilesEnumerator:
                  n_jobs: int = 1,
                  verbose: int = 0):
         """
-        Initializes a SmilesEnumerator object.
+        Initializes a SmilesRandomizer object.
 
         Parameters
         ----------
