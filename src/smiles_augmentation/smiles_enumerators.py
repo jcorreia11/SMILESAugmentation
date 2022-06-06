@@ -74,7 +74,7 @@ class SmilesRandomizer:
         else:
             return [smiles]
 
-    def enumerate(self, n_max: int = None) -> List[str]:
+    def enumerate(self, n_max: int = None) -> List[str, List[str]]:
         """
         Enumerate `n_max` new SMILES strings from the given SMILES.
 
@@ -85,8 +85,8 @@ class SmilesRandomizer:
 
         Returns
         -------
-        List[str]:
-            List of SMILES strings.
+        List[str, List[str]]:
+            List of enumerated SMILES strings.
         """
         if isinstance(self.smiles, str):
             return self._enumerate_one(self.smiles, n_max, self.remove_duplicates, self.seed)

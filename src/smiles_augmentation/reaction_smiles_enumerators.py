@@ -104,7 +104,7 @@ class ReactionSmilesRandomizer:
         else:
             return list(map('>>'.join, results))
 
-    def enumerate(self, n_max: int = 1) -> List[str]:
+    def enumerate(self, n_max: int = 1) -> List[str, List[str]]:
         """
         Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES.
 
@@ -115,8 +115,8 @@ class ReactionSmilesRandomizer:
 
         Returns
         -------
-        List[str]:
-            List of reaction SMILES strings.
+        List[str, List[str]]:
+            List of enumerated reaction SMILES strings.
         """
         if isinstance(self.reaction_smiles, str):
             return self._enumerate_one(self.reaction_smiles, n_max, self.remove_duplicates, self.seed, self.verbose)
@@ -228,7 +228,7 @@ class ReactionSmilesLevenshtein:
         else:
             return list(map('>>'.join, pairs))
 
-    def enumerate(self, n_max: int = 1) -> List[str]:
+    def enumerate(self, n_max: int = 1) -> List[str, List[str]]:
         """
         Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES using the Levenshtein distance.
 
@@ -239,8 +239,8 @@ class ReactionSmilesLevenshtein:
 
         Returns
         -------
-        List[str]:
-            List of reaction SMILES strings.
+        List[str, List[str]]:
+            List of enumerated reaction SMILES strings.
         """
         if isinstance(self.reaction_smiles, str):
             return self._enumerate_one(self.reaction_smiles, n_max, self.remove_duplicates, self.seed, self.verbose)
@@ -344,7 +344,7 @@ class ReactionSmilesPermutator:
         else:
             return list(map('>>'.join, results))
 
-    def enumerate(self, n_max: int = 1) -> List[str]:
+    def enumerate(self, n_max: int = 1) -> List[str, List[str]]:
         """
         Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES using permutations.
 
@@ -355,8 +355,8 @@ class ReactionSmilesPermutator:
 
         Returns
         -------
-        List[str]:
-            List of reaction SMILES strings.
+        List[str, List[str]]:
+            List of enumerated reaction SMILES strings.
         """
         if isinstance(self.reaction_smiles, str):
             return self._enumerate_one(self.reaction_smiles, n_max, self.remove_duplicates, self.seed, self.verbose)
