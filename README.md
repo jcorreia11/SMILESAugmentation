@@ -34,6 +34,34 @@ enumerator = SmilesRandomizer(smiles=smiles,
 enumerated_smiles = enumerator.enumerate(n_max=10)
 ```
 
+### Randomized SELFIES Augmentation
+
+It's very simple to perform SELFIES augmentation using the SMILESAugmentation tool.
+
+You only need to provide the SELFIES strings and the maximum number of SELFIES that you want to generate (only 1 by 
+default). 
+
+In the end you will get a list of lists with the enumerated SELFIES for each one of the SELFIES you provide.
+
+```python
+from smiles_augmentation.selfies_enumerators import SelfiesRandomizer
+
+# Get you SELFIES data
+selfies = ['[C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=Branch1][C][=O][N][C][=C][C][=Branch1][=Branch2][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][F][F]',
+           '[C][=C][C][=C][C][=C][Ring1][=Branch1]',
+           '[C][C][=Branch1][C][=O][O]']
+
+# Create a SELFIES randomizer object with the desired parameters (only your SELFIES data is required)
+enumerator = SelfiesRandomizer(selfies=selfies,
+                               remove_duplicates=True, 
+                               seed=123, 
+                               n_jobs=1, 
+                               verbose=0)
+
+# Call the enumerate method with the maximum number of SELFIES you want to generate
+enumerated_selfies = enumerator.enumerate(n_max=10)
+```
+
 ### Randomized Reaction SMILES Augmentation
 
 It's also very simple to perform reaction SMILES augmentation using the SMILESAugmentation tool.
