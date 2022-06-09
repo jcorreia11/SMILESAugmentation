@@ -104,7 +104,7 @@ class ReactionSmilesRandomizer:
         else:
             return list(map('>>'.join, results))
 
-    def enumerate(self, n_max: int = 1) -> List[str, List[str]]:
+    def enumerate(self, n_max: int = 1) -> List[Union[str, List[str]]]:
         """
         Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES.
 
@@ -115,7 +115,7 @@ class ReactionSmilesRandomizer:
 
         Returns
         -------
-        List[str, List[str]]:
+        List[Union[str, List[str]]]:
             List of enumerated reaction SMILES strings.
         """
         if isinstance(self.reaction_smiles, str):
@@ -228,7 +228,7 @@ class ReactionSmilesLevenshtein:
         else:
             return list(map('>>'.join, pairs))
 
-    def enumerate(self, n_max: int = 1) -> List[str, List[str]]:
+    def enumerate(self, n_max: int = 1) -> List[Union[str, List[str]]]:
         """
         Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES using the Levenshtein distance.
 
@@ -239,7 +239,7 @@ class ReactionSmilesLevenshtein:
 
         Returns
         -------
-        List[str, List[str]]:
+        List[Union[str, List[str]]]:
             List of enumerated reaction SMILES strings.
         """
         if isinstance(self.reaction_smiles, str):
@@ -344,7 +344,7 @@ class ReactionSmilesPermutator:
         else:
             return list(map('>>'.join, results))
 
-    def enumerate(self, n_max: int = 1) -> List[str, List[str]]:
+    def enumerate(self, n_max: int = 1) -> List[Union[str, List[str]]]:
         """
         Enumerate `n_max` new reaction SMILES strings from the given reaction SMILES using permutations.
 
@@ -355,7 +355,7 @@ class ReactionSmilesPermutator:
 
         Returns
         -------
-        List[str, List[str]]:
+        List[Union[str, List[str]]]:
             List of enumerated reaction SMILES strings.
         """
         if isinstance(self.reaction_smiles, str):
