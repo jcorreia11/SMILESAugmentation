@@ -1,7 +1,7 @@
 # SMILESAugmentation Examples:
 
-This folder contains examples on how SMILESAugmentation can be used to perform data augmentation for SMILES and
-reaction SMILES.
+This folder contains examples on how SMILESAugmentation can be used to perform data augmentation for SMILES, SELFIES 
+and reaction SMILES.
 
 ## Jupyter Notebooks
 
@@ -25,3 +25,8 @@ reaction SMILES.
 
     Quick example on how to use SMILESAugmentation for reaction SMILES data augmentation using reactants 
     and products permutations.
+
+
+- [SELFIES Randomizer](selfies_augmentation_example.ipynb):
+
+    Quick example on how to use SMILESAugmentation for compound SELFIES data augmentation.
